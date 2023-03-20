@@ -1,0 +1,226 @@
+.right-job-section {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0 20px;
+}
+
+.right-job-section h1 {
+  font-style: normal;
+  width: 60%;
+  min-width: 100px;
+  font-weight: 700;
+  font-size: clamp(30px, 5vw, 70px);
+  line-height: clamp(40px, 5vw, 82px);
+  text-align: center;
+
+  color: #000000;
+}
+
+.right-job-section span {
+  color: #4540db;
+}
+.right-job-section h3 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: clamp(20px, 2vw, 40px);
+  line-height: clamp(18px, 2vw, 35px);
+  text-align: center;
+
+  color: #000000;
+}
+
+.one-platform-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f7fc;
+  padding: 20px;
+}
+
+.one-platform-container h1 {
+  font-style: normal;
+  width: 30%;
+  font-weight: 700;
+  font-size: clamp(25px, 5vw, 50px);
+  line-height: clamp(30px, 5vw, 60px);
+  text-align: center;
+
+  color: #000000;
+}
+
+.one-platform-container span {
+  color: #4540db;
+}
+
+.all-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  justify-content: center;
+}
+
+.card-container {
+  display: flex;
+  max-width: 220px;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.card-icon {
+  width: 100px;
+  height: 100px;
+  /* background-color: #4540db; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+}
+
+.card-content {
+  padding: 5px;
+}
+
+.all-candidate-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.all-candidate-container h1 {
+  font-style: normal;
+  width: 40%;
+  min-width: 100px;
+  font-weight: 700;
+  font-size: clamp(25px, 5vw, 50px);
+  line-height: clamp(30px, 5vw, 70px);
+  text-align: center;
+
+  color: #000000;
+}
+
+.all-candidate-container span {
+  color: #4540db;
+}
+
+.apply-card-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  max-height: 400px;
+  justify-content: center;
+  align-items: self-start;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.all-candidate-container .company {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.job-apply {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 250px;
+}
+
+.apply-btn {
+  background-color: #f9f9ff;
+  color: #4540db;
+  border-radius: 10px;
+  border: none;
+  padding: 10px 16px;
+}
+
+.footer-card {
+  display: flex;
+  flex-direction: row;
+  background-color: #4540db;
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 20px;
+}
+.foofter-card-content {
+  align-self: center;
+}
+
+.footer {
+  border-top: #4540db 1px solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 30px;
+  /* background-color: #4540db; */
+  padding: 20px;
+}
+
+.auth-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6f7fc;
+  padding: 20px;
+}
+
+.auth-container h1 {
+  font-style: normal;
+  /* width: 30%; */
+  font-weight: 700;
+  font-size: clamp(30px, 5vw, 80px);
+  line-height: clamp(25px, 5vw, 50px);
+  text-align: center;
+
+  color: #000000;
+}
+
+.auth-container h3 {
+  font-style: normal;
+  /* width: 30%; */
+  font-weight: 400;
+  font-size: clamp(20px, 6vw, 50px);
+  line-height: clamp(20px, 5vw, 40px);
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 15px;
+
+  color: #000000;
+}
+
+.auth-container button {
+  background-color: #4285f4;
+  font-size: clamp(12px, 2vw, 20px);
+  color: #ffffff;
+  border-radius: 10px;
+  border: none;
+  padding: 14px 20px;
+  margin-top: 20px;
+}
