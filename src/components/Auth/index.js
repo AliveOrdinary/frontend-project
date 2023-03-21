@@ -5,23 +5,23 @@ import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { UserContext } from "../../context/userContext";
 import { useNavigate } from "react-router-dom";
 
-const Auth = ({ type }) => {
+const Auth = ({ userType }) => {
   const provider = new GoogleAuthProvider();
   const [userData, dispatch] = useContext(UserContext);
   const navigate = useNavigate();
 
   const redirectUser = () => {
-    if (type === "candidate") {
+    if (userType === "candidate") {
       if (
         //user exists in database
-        true
+        false
       ) {
         navigate("/candidate/profile");
       } else {
         navigate("/candidate/onboarding");
       }
     } else {
-      if (true) {
+      if (false) {
         navigate("/employer/profile");
       } else {
         navigate("/employer/onboarding");
@@ -33,7 +33,7 @@ const Auth = ({ type }) => {
       .then((result) => {
         // This gives you a Google Access Token. You can use it to access the Google API
         // console.log(result);
-        const user = { result };
+        const { user } = result;
         const { displayName, email, photoURL } = user;
         dispatch({
           type: "LOGIN",
@@ -43,6 +43,7 @@ const Auth = ({ type }) => {
             photoURL,
           },
         });
+        console.log(userData);
         redirectUser();
       })
       .catch((error) => {
@@ -53,7 +54,7 @@ const Auth = ({ type }) => {
 
   return (
     <div className="auth-container">
-      <h1>Welcome {type}</h1>
+      <h1>Welcome {userType}</h1>
       <h3>Please Sign In</h3>
       <div>
         <button onClick={signIn}>Sign In with Google</button>

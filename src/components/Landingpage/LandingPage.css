@@ -224,3 +224,8 @@
   padding: 14px 20px;
   margin-top: 20px;
 }
+
+.auth-container button:hover {
+  background-color: #4540db;
+  transform: scale(1.1);
+}
