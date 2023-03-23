@@ -89,3 +89,19 @@ export const companySize = [
   "10001-50000",
   "50001-100000",
 ];
+
+export const jobType = ["Full Time", "Part Time", "Contract", "Internship"];
+
+export const currency = [
+  "USD",
+  "EUR",
+  "GBP",
+  "INR",
+  "AUD",
+  "CAD",
+  "SGD",
+  "CHF",
+  "MYR",
+  "JPY",
+  "CNY",
+];

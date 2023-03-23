@@ -27,8 +27,9 @@ const Navs = () => {
     return (
       <div>
         <TopBar pages={pages} />
-        <div style={{ marginTop: "4vh" }}></div>
-        <Outlet />
+        <div style={{ marginTop: "4vh" }}>
+          <Outlet />
+        </div>
       </div>
     );
   };
@@ -42,8 +43,9 @@ const Navs = () => {
     return (
       <div>
         <TopBar pages={pages} />
-        <div style={{ marginTop: "4vh" }}></div>
-        <Outlet />
+        <div style={{ marginTop: "8vh" }}>
+          <Outlet />
+        </div>
       </div>
     );
   };
