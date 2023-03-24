@@ -83,7 +83,7 @@ const CandidateProfile = () => {
   };
 
   return (
-    <div>
+    <div style={{ marginTop: "7vh" }}>
       {screenLoading ? (
         <FormLoading fields={10} height={100} />
       ) : (

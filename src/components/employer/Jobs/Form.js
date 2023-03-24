@@ -68,7 +68,8 @@ const Form = ({ setShowForm, selectedJob }) => {
         jobId,
         createdAt: new Date().toISOString(),
         employerId: userData.user.email,
-        employerName: "employer name",
+        employerName: userData.userInfo.company_name,
+        employerLogo: userData.userInfo.logo,
       });
       if (selectedJob) {
         toastMessage("Job updated successfully", "success");

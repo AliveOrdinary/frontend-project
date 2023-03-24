@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const EmployerApplicants = () => {
-    return (
-        <div>EmployerApplicants</div>
-    )
-}
+  return <div style={{ marginTop: "4vh" }}> EmployerApplicants</div>;
+};
 
-export default EmployerApplicants
+export default EmployerApplicants;

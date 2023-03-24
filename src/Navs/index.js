@@ -27,7 +27,7 @@ const Navs = () => {
     return (
       <div>
         <TopBar pages={pages} />
-        <div style={{ marginTop: "4vh" }}>
+        <div style={{ marginTop: "8vh" }}>
           <Outlet />
         </div>
       </div>
@@ -80,7 +80,10 @@ const Navs = () => {
           <Route path="/employer/jobs" element={<EmployerJobs />} />
           <Route path="/employer/profile" element={<EmployerProfile />} />
           <Route path="/employer/onboarding" element={<EmployerOnboarding />} />
-          <Route path="/employer/applicants" element={<EmployerApplicants />} />
+          <Route
+            path="/employer/applications"
+            element={<EmployerApplicants />}
+          />
           <Route
             path="/employer/conversation"
             element={<EmployerConversations />}

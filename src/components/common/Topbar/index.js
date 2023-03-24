@@ -43,7 +43,7 @@ function TopBar({ pages }) {
   return (
     <AppBar
       position="fixed"
-      style={{
+      sx={{
         backgroundColor: "#fff",
       }}
     >

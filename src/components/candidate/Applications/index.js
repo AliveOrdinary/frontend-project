@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const CandidateApplications = () => {
-    return (
-        <div>CandidateApplications</div>
-    )
-}
+  return <div style={{ marginTop: "7vh" }}>CandidateApplications</div>;
+};
 
-export default CandidateApplications
+export default CandidateApplications;

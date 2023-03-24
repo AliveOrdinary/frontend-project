@@ -1,12 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const EmployerConversation
-    = () => {
-        return (
-            <div>EmployerConversation
+const EmployerConversation = () => {
+  return <div style={{ marginTop: "7vh" }}>EmployerConversation</div>;
+};
 
-            </div>
-        )
-    }
-
-export default EmployerConversation
+export default EmployerConversation;

@@ -1,28 +1,49 @@
 import React, { useContext } from "react";
 // import authImg from "../../assets/authImg.png";
-import { auth } from "../../firebaseconfig";
+import { auth, db } from "../../firebaseconfig";
 import { signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { UserContext } from "../../context/userContext";
 import { useNavigate } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
 
 const Auth = ({ userType }) => {
   const provider = new GoogleAuthProvider();
   const [userData, dispatch] = useContext(UserContext);
   const navigate = useNavigate();
 
-  const redirectUser = () => {
+  const redirectUser = async (email) => {
+    let u = await getDoc(doc(db, "users", email));
+    let userInfoFromDb = null;
+    if (u.exists()) {
+      userInfoFromDb = u.data();
+    }
     if (userType === "candidate") {
-      if (
-        //user exists in database
-        false
-      ) {
-        navigate("/candidate/profile");
+      if (userInfoFromDb) {
+        if (userInfoFromDb.userType === "candidate") {
+          dispatch({
+            type: "SET_USER_INFO",
+            payload: userInfoFromDb,
+          });
+          navigate("/candidate/profile");
+        } else {
+          alert("This id is registered as employer");
+          return;
+        }
       } else {
         navigate("/candidate/onboarding");
       }
     } else {
-      if (false) {
-        navigate("/employer/profile");
+      if (userInfoFromDb) {
+        if (userInfoFromDb.userType === "employer") {
+          dispatch({
+            type: "SET_USER_INFO",
+            payload: userInfoFromDb,
+          });
+          navigate("/employer/profile");
+        } else {
+          alert("This id is registered as candidate");
+          return;
+        }
       } else {
         navigate("/employer/onboarding");
       }
@@ -44,7 +65,7 @@ const Auth = ({ userType }) => {
           },
         });
         console.log(userData);
-        redirectUser();
+        redirectUser(email);
       })
       .catch((error) => {
         // Handle Errors here.
