@@ -6,7 +6,7 @@ const JobCard = ({ job, applyForJob }) => {
   const {
     comany_logo,
     createdAt,
-    joblocation,
+    jobLocation,
     employerName,
     jobId,
     jobTitle,
@@ -39,7 +39,7 @@ const JobCard = ({ job, applyForJob }) => {
           {jobTitle}
         </Grid>
         <Grid item xs={12} md={2}>
-          {joblocation}
+          {jobLocation}
         </Grid>
         <Grid item xs={12} md={3}>
           {salary.currency} {salary.min} - {salary.max}
@@ -48,9 +48,9 @@ const JobCard = ({ job, applyForJob }) => {
           {moment(createdAt).startOf("hour").fromNow()}'
         </Grid>
         <Grid item xs={12} md={2}>
-          <Button onClick={() => applyForJob(job)} className="apply-btn">
+          <button onClick={() => applyForJob(job)} className="apply-btn">
             Apply button
-          </Button>
+          </button>
         </Grid>
       </Grid>
     </div>

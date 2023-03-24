@@ -61,7 +61,7 @@ const CandidateJobs = () => {
         jobId: job.jobId,
         jobTitle: job.jobTitle,
         jobType: job.jobType,
-        joblocation: job.joblocation,
+        jobLocation: "Bangalore",
         resume: userData.userInfo.resume,
       });
       toastMessage("Applied for job successfully", "success");
