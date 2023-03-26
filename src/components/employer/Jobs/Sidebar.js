@@ -100,7 +100,13 @@ const Sidebar = ({ postAJob, selectedJob, selectedAjob }) => {
     fetchAllJobs();
   }, []);
   return (
-    <div style={{ padding: "8px", background: "#ffffff", height: "100vh" }}>
+    <div
+      style={{
+        padding: "8px",
+        background: "#ffffff",
+        height: "100%",
+      }}
+    >
       <Grid container className="postBtn" onClick={postAJob}>
         <Grid item className="maintext">
           + Post A Job

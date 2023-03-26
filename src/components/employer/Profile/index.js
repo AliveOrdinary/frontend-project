@@ -440,7 +440,7 @@ const EmployerProfile = () => {
                 onUpload={(url) =>
                   setUserInformation({ ...userInformation, logo: url })
                 }
-                value={userInformation.resume}
+                value={userInformation.logo}
               />
             </Grid>
           </Grid>

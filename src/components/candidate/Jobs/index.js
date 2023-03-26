@@ -18,13 +18,14 @@ const CandidateJobs = () => {
   const [userData, dispatch] = useContext(UserContext);
   const [jobs, setJobs] = React.useState([]);
   const fetchAllJobs = async () => {
+    console.log(userData.userInfo);
     try {
       const q = query(collection(db, "jobs"));
 
       const data = await getDocs(q);
       let j = [];
       data.forEach((doc) => {
-        console.log(doc.data());
+        // console.log(doc.data());
         j.push(doc.data());
       });
       setJobs(j);
@@ -63,6 +64,8 @@ const CandidateJobs = () => {
         jobType: job.jobType,
         jobLocation: "Bangalore",
         resume: userData.userInfo.resume,
+        status: "Applied",
+        createdAt: new Date().toISOString(),
       });
       toastMessage("Applied for job successfully", "success");
     } catch (error) {

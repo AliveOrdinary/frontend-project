@@ -49,7 +49,7 @@ const JobCard = ({ job, applyForJob }) => {
         </Grid>
         <Grid item xs={12} md={2}>
           <button onClick={() => applyForJob(job)} className="apply-btn">
-            Apply button
+            Apply
           </button>
         </Grid>
       </Grid>
